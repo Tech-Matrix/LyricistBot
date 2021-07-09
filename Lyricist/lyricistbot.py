@@ -81,8 +81,8 @@ async def spt(ctx, user: discord.Member = None):
 #invite BOT
 @client.command()
 async def invite(ctx):
-    embed = discord.Embed(title="Invite Lyricist Bot to your Discord Server", url="https://discord.com/api/oauth2/authorize?client_id=860175251559022652&permissions=8&scope=bot",
-                          description="Use the following link: https://bit.ly/3dS30LJ", color=discord.Color.from_rgb(57,255,20))
+    embed = discord.Embed(title="Invite Lyricist Bot to your Discord Server", url="https://discord.com/api/oauth2/authorize?client_id=860812053298937877&permissions=8&scope=bot",
+                          description="Use the following link: https://bit.ly/3e2BFqa", color=discord.Color.from_rgb(57,255,20))
     await ctx.send(embed=embed)
 
 
