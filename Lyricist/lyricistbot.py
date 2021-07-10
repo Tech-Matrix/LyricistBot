@@ -66,8 +66,8 @@ async def spt(ctx, user: discord.Member = None):
             else:
               lyrics_list.append(line)
             
-        lyrics_list[:-2]
-      
+      lyrics_list[:-2]
+
       embed= discord.Embed(
         title = "The lyrics to "+song.title,
         description =  '\n'.join(lyrics_list),
@@ -122,7 +122,7 @@ async def sng(ctx,*arg):
             lyrics_list.append(line)
         
         lyrics_list[:-2]
-        
+
         embed= discord.Embed(
         title = "The lyrics to "+song.title,
         description =  '\n'.join(lyrics_list),
@@ -179,9 +179,9 @@ async def lyr(ctx, *arg):
             lyrics.remove(line)
           else:
             lyrics_list.append(line)
-
-      lyrics_list[:-2]
       
+      lyrics_list[:-2]
+
       embed= discord.Embed(
         title = 'Embedded lyrics',
         description =  '\n'.join(lyrics_list),
@@ -201,7 +201,7 @@ async def art(ctx,*arg):
     string = arg                  #string to store input from user(arg)
 
     for str in string:
-        artist_name = artist_name + str
+        artist_name = artist_name +" "+ str
     if len(arg) == 0:  #if no input from the user
       embed= discord.Embed(
         title = "Error",
@@ -224,18 +224,18 @@ async def art(ctx,*arg):
                 lyrics.remove(line)
             else:
                 lyrics_list.append(line)
-           
-          lyrics_list[:-2]
           
-          embed= discord.Embed(
+      lyrics_list[:-2]
+          
+      embed= discord.Embed(
             title = 'Here are the lyrics',
             description =  '\n'.join(lyrics_list),
             colour = discord.Colour.from_rgb(57,255,20) 
           )
 
-          await ctx.channel.send(embed=embed)
+      await ctx.channel.send(embed=embed)
 
-          await ctx.channel.send('Guess the song using .ans [song name] ~ [artist_name] (ex: .ans Viva La Vida ~ Coldplay) ')
+      await ctx.channel.send('Guess the song using .ans [song name] ~ [artist_name] (ex: .ans Viva La Vida ~ Coldplay) ')
 
 @client.command()
 async def ans(ctx,*arg):  # .ans Viva La Vida ~ Coldplay
@@ -418,7 +418,7 @@ async def upmusic(ctx):
     embed = discord.Embed(title=name, url=random_sub.url,
                            color=discord.Color.random(),
                            )
-   
+    #embed.set_image(url=random_sub.url)
     await ctx.send(embed=embed)
 
 client.run(token)
