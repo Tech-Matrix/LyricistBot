@@ -66,7 +66,7 @@ async def spt(ctx, user: discord.Member = None):
             else:
               lyrics_list.append(line)
             
-      lyrics_list[:-2]
+        lyrics_list[:-2]
       
       embed= discord.Embed(
         title = "The lyrics to "+song.title,
