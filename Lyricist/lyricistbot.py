@@ -14,7 +14,7 @@ import praw
 intents = discord.Intents.all()
 
 token = os.environ.get("TOKEN")                       #add Discord Bot token
-api = genius.Genius('GENIUS_TOKEN')   #add genius token
+api = genius.Genius('aKDMKgolc1ZSD_DDH-QjK2YyRymM1_Jc2jFdAkThZLmCAwg0mMYhfdnsbnOrD_Nu')   #add genius token
 
 client = commands.Bot(command_prefix = '.',intents=intents)  #assigning command prefix
 client.remove_command("help")
