@@ -14,7 +14,7 @@ import praw
 intents = discord.Intents.all()
 
 token = os.environ.get("TOKEN")                       #add Discord Bot token
-api = genius.Genius('aKDMKgolc1ZSD_DDH-QjK2YyRymM1_Jc2jFdAkThZLmCAwg0mMYhfdnsbnOrD_Nu')   #add genius token
+api = genius.Genius('GENIUS_TOKEN')   #add genius token
 
 client = commands.Bot(command_prefix = '.',intents=intents)  #assigning command prefix
 client.remove_command("help")
@@ -66,7 +66,8 @@ async def spt(ctx, user: discord.Member = None):
             else:
               lyrics_list.append(line)
             
-
+      lyrics_list[:-2]
+      
       embed= discord.Embed(
         title = "The lyrics to "+song.title,
         description =  '\n'.join(lyrics_list),
@@ -119,7 +120,9 @@ async def sng(ctx,*arg):
             lyrics.remove(line)
           else:
             lyrics_list.append(line)
-
+        
+        lyrics_list[:-2]
+        
         embed= discord.Embed(
         title = "The lyrics to "+song.title,
         description =  '\n'.join(lyrics_list),
@@ -177,6 +180,8 @@ async def lyr(ctx, *arg):
           else:
             lyrics_list.append(line)
 
+      lyrics_list[:-2]
+      
       embed= discord.Embed(
         title = 'Embedded lyrics',
         description =  '\n'.join(lyrics_list),
@@ -219,7 +224,9 @@ async def art(ctx,*arg):
                 lyrics.remove(line)
             else:
                 lyrics_list.append(line)
-    
+           
+          lyrics_list[:-2]
+          
           embed= discord.Embed(
             title = 'Here are the lyrics',
             description =  '\n'.join(lyrics_list),
